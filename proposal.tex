@@ -1,0 +1,124 @@
+
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{csvsimple}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[section]{placeins}
+\usepackage{siunitx}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{outlines}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\newcommand{\csvloopx}[2][]{\csvloop{#1,#2}}
+\newcommand{\csvautotabularx}[2][]{\csvloopx[#1]{autotabular={#2}}}
+\newcommand{\respectpercent}{\catcode`\%=12\relax}
+
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+ 
+\title{
+Career Path Prediction
+}
+\author{
+Jeremiah Bill and Raayan Pillai %name
+\\
+CSC 240 %class
+} %if necessary, replace with your course title
+ 
+\maketitle
+ 
+\section{Introduction}
+\subsection{Problem statement}
+With the excess of career opportunities in our society, it has become increasingly difficult to choose the “right” career path. This is dubbed the Paradox of Choice  where having more options causes individuals to struggle in making decisions due to fear of making the wrong decision. With this in mind, we are seeking to limit this range of choices and give students and professionals the opportunity to better understand career paths based on the current and previous jobs they have had and the current job market. LinkedIn is very easy to scrape with the various frameworks availible for python and node.js and we have had experience doing this in the past. This data can then be stored in either a MongoDB or some SQL instance.
+
+\subsection{What to predict}
+What type of job would be a good fit for an individual's skill set?
+How does this predicted job compare to the current job market?
+Do they meet the qualifications for this job?
+How does someone's education play a role in the job they will receive?
+
+
+\subsection{Process}
+\begin{outline}[enumerate]
+\1 Scrape Linkedin Data
+\2 Profile data
+\2 Use current job position as ground truth and use work history as a means to predict current job
+\2 Useful attributes: industry, salary, education, number of connections, featured skills and endorsements (numeric and categorical), interests, location
+\1 Gather data from other sources
+\2 Indeed.com offers an anonymized resume db
+\3 Can be used to analyze frequent patterns in job descriptions 
+\2 The WSJ offers a dataset with data from colleges within the U.S.
+\3 Salary expectations
+\3 Type of university
+\2 Job openings - market demand for jobs
+\3 Analyze current market demand for jobs
+\3 View which industries offer jobs for a given individual
+\4 How many jobs for new grads
+\4 How many jobs for experienced people 
+\4 Can be matched with outcome of previous analysis from linkedin and resumes
+\end{outline}
+
+\subsection{Programming Languages and Tools}
+\begin{outline}
+\1 \emph{Python} Will be used for web scrapping and data analysis.
+\2 \emph{requests} used retrieving HTML pages.
+\2 \emph{beautifulsoup4} used for contextual mining from HTML pages.
+\2 \emph{TensorFlow, scikit-learn, Numpy, Pandas} used for analysis.
+\2 \emph{TensorBoard, Matplotlib, pyplot} used for visualization.
+\1 \emph{MongoDB, MySQL, PostgreSQL} Will be used for storing data.
+\end{outline}
+
+
+\subsection{Algorithms}
+\begin{outline}[enumerate]
+\1 Various clustering Algorithms to plot tuples (people) to compare and analyze job market.
+\1 Classification for LinkedIn and Resume Data
+\2 Naive Bayes - predict job category/industry
+\2 Create itemsets of users employment path ($Bank > Tech Company > Quant Firm$...)
+\2 Multivariate Regression to predict salary
+\1 Frequent Itemset Mining
+\2 Analyze job descriptions
+\2 Mine keywords
+\end{outline}
+
+
+\section{Data Sources}
+\url{https://www.kaggle.com/ludobenistant/hr-analytics} \\
+\url{https://www.kaggle.com/wsj/college-salaries/data} \\
+\url{https://www.kaggle.com/datasets?sortBy=relevance&group=featured&search=job} \\
+\url{https://www.indeed.com/resumes} \\
+\url{https://linkedin.com} \\
+
+
+
+\end{document}
