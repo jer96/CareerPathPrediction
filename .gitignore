@@ -101,3 +101,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# large files
+data/education/DOE-college-data.pickle
+data/education/Most-Recent-Cohorts-All-Data-Elements.csv
+data/education/~$CollegeScorecardDataDictionary.xlsx
