@@ -18,7 +18,7 @@ with open('links.txt', 'rb') as f:
 config = ConfigParser.ConfigParser()
 config.read("../../../config.ini")
 
-users = open('users.txt','a')
+users = open('users.txt','ab')
 cwriter = csv.writer(users, delimiter=',', quotechar='|')
 
 username = config.get("vars", "user") 
@@ -38,7 +38,7 @@ driver.find_element_by_name("signin").click()
 for link in links:
 	time.sleep(1)
 	driver.get(link)
-	time.sleep(0.5)
+	time.sleep(1)
 	driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 	companies = driver.find_elements_by_xpath("//a[@data-control-name='background_details_company']")
 	schools = driver.find_elements_by_xpath("//a[@data-control-name='background_details_school']")
@@ -51,7 +51,7 @@ for link in links:
 		school = dict(itertools.izip_longest(*[iter(data[1:])] * 2, fillvalue=""))
 		school['School'] = data[0]
 		school_rev = {}
-		school_rev['grade'] = school.get('Grade', 0)
+		school_rev['grade'] = school.get('Grade', 'GPA 0')
 		school_rev['dates'] = school.get('Dates attended or expected graduation', '')
 		school_rev['degree'] = school.get('Degree Name', '')
 		school_rev['field'] = school.get('Field of Study', '')
@@ -80,8 +80,9 @@ for link in links:
 		user.append(company['employment_dates'])
 		user.append(company['employment_duration'])
 	
-	print(user)
-	cwriter.writerow(user)
+	if user != []:
+		cwriter.writerow(user)
+		print(user)
 	users.flush()
 
 	
