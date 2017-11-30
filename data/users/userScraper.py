@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-#import ConfigParser
+import ConfigParser
 import time
 import itertools
 import csv
@@ -15,19 +15,19 @@ links = []
 with open('links.txt', 'r+') as f:
         links = [line.rstrip('\n') for line in f]
 
-#config = ConfigParser.ConfigParser()
-#config.read("../../../config.ini")
+config = ConfigParser.ConfigParser()
+config.read("../../../config.ini")
 
 users = open('users.txt','a+')
 cwriter = csv.writer(users, delimiter=',', quotechar='|')
 
-#username = config.get("vars", "user") 
-#password = config.get("vars", "passw")
-username = input("user: ")
-password = getpass.getpass("pass: ")
+username = config.get("vars", "user") 
+password = config.get("vars", "passw")
+#username = input("user: ")
+#password = getpass.getpass("pass: ")
 
-driver = webdriver.PhantomJS()
-#driver = webdriver.Firefox()
+#driver = webdriver.PhantomJS()
+driver = webdriver.Firefox()
 driver.get("https://www.linkedin.com/uas/login")
 username_field = driver.find_element_by_name("session_key")
 password_field = driver.find_element_by_name("session_password")
@@ -42,7 +42,7 @@ for link in links:
     time.sleep(1)
     driver.get(link)
     time.sleep(1)
-    #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     companies = driver.find_elements_by_xpath("//a[@data-control-name='background_details_company']")
     schools = driver.find_elements_by_xpath("//a[@data-control-name='background_details_school']")
      
