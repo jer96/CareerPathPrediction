@@ -18,7 +18,7 @@ with open('links.txt', 'r+') as f:
 config = ConfigParser.ConfigParser()
 config.read("../../../config.ini")
 
-users = open('users.txt','a+')
+users = open('users.csv','a+')
 cwriter = csv.writer(users, delimiter=',', quotechar='|')
 
 username = config.get("vars", "user") 
