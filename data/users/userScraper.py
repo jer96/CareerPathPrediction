@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException
 import ConfigParser
 import time
 import itertools
@@ -11,9 +12,11 @@ import re
 import getpass
 
 
+start = 184
 links = []
 with open('links.txt', 'r+') as f:
         links = [line.rstrip('\n') for line in f]
+links = links[start:]
 
 config = ConfigParser.ConfigParser()
 config.read("../../../config.ini")
@@ -35,10 +38,23 @@ username_field.send_keys(username)
 password_field.send_keys(password)
 driver.find_element_by_name("signin").click()
 
+def login(login_button):
+    username_field = driver.find_element_by_name("session_key")
+    password_field = driver.find_element_by_name("session_password")
+    username_field.send_keys(username)
+    password_field.send_keys(password)
+    login_button.click()
+
 
 
 
 for link in links:
+    try:
+        loginb = driver.find_element_by_id('login-submit')
+        login(loginb)
+    except NoSuchElementException:
+        print("Not logged out")
+        
     time.sleep(1)
     driver.get(link)
     time.sleep(1)
