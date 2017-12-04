@@ -30,8 +30,8 @@ def add_resume_urls(job_query, start=None):
 	for li in ol.find_all('li',class_='sre'):
 		job_id_query = 'r/' + li['id']
 		job_id_query = base_url + job_id_query
-		job_id_query_list = [job_id_query, job]
-		url_list.append(job_id_query_list, job_query)
+		job_id_query_list = [job_id_query, job_query]
+		url_list.append(job_id_query_list)
 
 	resume_urls = open('resume_urls.csv', 'a') 
 	with resume_urls:  
