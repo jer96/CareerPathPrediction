@@ -30,6 +30,13 @@ test_floor = 300
 test_users = users[test_floor:]
 users = users[:test_floor]
 print(len(users), len(test_users))
+# Main binning
+#company_bins = [0, 50, 200, 500, len(top_companies), len(top_companies)+1, len(top_companies)+2]
+#company_bin_labels = ['T1', 'T2', 'T3', 'T4', 'T5', 'NONE']
+#school_bins = [0, 50, 200, 500, len(top_schools), len(top_schools)+1, len(top_schools)+2]
+#school_bin_labels = ['T1', 'T2', 'T3', 'T4', 'T5', 'NONE']
+
+# Alternate Binning
 company_bins = [0, 50, 200, 500, len(top_companies), len(top_companies)+1, len(top_companies)+2]
 company_bin_labels = ['T1', 'T2', 'T3', 'T4', 'T5', 'NONE']
 school_bins = [0, 50, 200, 500, len(top_schools), len(top_schools)+1, len(top_schools)+2]
