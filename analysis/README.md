@@ -1,6 +1,7 @@
-# trajectory-analysis-rev.py 
-## Results with LinkedIn and Indeed user data
-## Predicting 3 job given schooling, job 1 and job 2
+# Analysis Results
+### trajectory-analysis-rev.py 
+Results with LinkedIn and Indeed user data
+Predicting 3 job given schooling, job 1 and job 2
 
 |train|test|accuracy|
 |---|---|---|
