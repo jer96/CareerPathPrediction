@@ -1,0 +1,539 @@
+1-800-FLOWERS.COM, INC.
+1010data
+ACA Technology
+ADP
+AIG
+AT&T
+AUGMATE
+Accenture
+ActionIQ
+Ad Hoc LLC
+Adam Barcan Photography
+Aetion, Inc.
+All-Tame Animals
+AltSchool
+Amazon
+Amazon (Audible, Inc)
+Amazon Robotics
+Amazon Web Services
+Amcom Software
+American Express
+Amherst College
+Amherst College Department of Computer Science
+Amherst College Office of Admission
+Ammi Ribar Antiques & Fine Period Frames
+Amplify Education
+Anchorage Capital Group, L.L.C.
+App Academy
+AppNexus
+Applause
+Apple
+ArchHacks
+Arity
+ArtWare Fundraising
+Audible, Inc.
+AudioScience, Inc.
+Avarint
+Axial
+B12
+BNY Mellon
+BRQ
+Baidu USA
+Baidu, Inc.
+Barnard College
+BdubD Enterprises
+Beijing Hitevision Intelligent Solutions Ltd.
+Binghamton University
+Blinkist
+Blissfully
+Bloomberg LP
+Bloomy Controls
+Blue Apron
+Blue Chip Athletics
+BlueMetal Inc.
+Bluehouse Group
+Boeing
+Bonobos
+Boston College
+Bounce Exchange
+BounceX
+Box
+Boxed
+Brewster Inc
+Brown University
+Brown University Department of Computer Science
+Build In Motion
+BuzzFeed
+CB Insights
+CEO of My Life
+CNNIC
+Cadre
+Caffeinated Analytics
+Capgemini
+Capital One
+Carleton College
+Carleton University
+Carnegie Mellon University
+Center for Innovative Ventures of Emerging Technologies
+Cheerity
+Chegg Inc.
+Cimpress
+Cisco
+Cisco Meraki
+Citi
+City University of New York
+ClearFactr
+ClearStructure Financial Technology
+Codecademy
+Cognius
+Coinbase
+Colgate-Palmolive
+Columbia Graphics & User Interfaces Lab
+Columbia University - Columbia Business School
+Columbia University Marching Band
+Columbia University in the City of New York
+Combrr
+ComiteMD
+Common
+CompStak
+CompareGlobalGroup
+ConnectAgric
+ConnectPrep
+Connecticut College
+Cornell University
+Cornell's Global Economics & Finance Society
+CraftWorks Enterprises
+Credit Suisse
+CressCap Investment Research
+Crisis Text Line
+CrowdTwist, Inc.
+Curtis Instruments
+Cvent
+Datto, Inc.
+Def Method
+Department of Computer Science, Binghamton University
+Department of Electrical and Computer Engineering, Drexel University
+Deutsche Bank
+Dev Bootcamp
+Dextro
+Dia.co
+DigiFi
+DigitalOcean
+Diial
+Discovery Communications
+Dropbox
+EBS BrokerTec
+ESPN
+EY
+EZ Lane
+EarthLink Business
+East Boca Dental
+Emerson Process Management
+Engrana
+Epic
+Ericsson
+Escuelas Catlicas
+Etsy
+EventStreams, LLC
+Exegy
+Eyeview
+F#
+FDM Group
+FUIR LLC
+Facebook
+FactSet
+FactSet Research Systems
+Fidelity Investments
+Fif Express Inc
+FinTech Portfolio
+Findyr
+Flatiron Health
+Flatiron School
+Flawless Hacks
+Flextronics
+Florida Blue
+Florida International University
+Flywheel Sports
+Fog Creek Software
+Freelance
+Freelance, self-employed
+Fullstack Academy
+Fullstack Academy of Code
+Fundera
+GE
+General Assembly
+George Eastman House
+Girls Who Code
+Goergen Athletic Center
+Goggan NYC
+Goldman Sachs
+Google
+Greenhouse Software
+Greenhouse Software, Inc.
+Group Nine Media
+Guidepoint
+Gulfcoast Legal Services, Inc
+HBO
+HYPR Corp.
+Hack Reactor
+Hackathons
+HackerRank (formerly interviewstreet)
+Harris Corporation
+Harris RF Communications
+Harry's, Inc.
+Harvey Mudd College
+Hecticus Software Inc
+HedgeServ
+Hertz
+Hewlett-Packard
+Highbridge Capital Management
+Hofstra University
+Hometeam.
+Hootli
+Hustle
+Hyland Software
+IBM
+ICAP
+IDT Corporation
+IIIYI
+IUP Software Development Center
+Illinois Institute of Technology
+Imagine Easy Solutions
+Impark
+Independent Contractor
+InquisitHealth
+InstaEDU
+Instagram
+Integrative Pain Management Service, Kaiser Walnut Creek
+Intel Corporation
+Intersection Co.
+IrisVR, Inc.
+Israel Tech Challenge
+J.P. Morgan
+J.P. Morgan Asset Management
+J9 Technologies
+JP Morgan
+JPMorgan Chase
+JPMorgan Chase & Co.
+Jan 2015  Sep 2016
+Jeppesen Inc
+Jesus' Economy
+Jet.com
+Johnson & Johnson
+Joycestick
+Jozii
+Jun 2016  Feb 2017
+KEW Inc.
+KOgent Systems, LLC
+Kamian Technologies
+Kikin, Inc.
+Kindwave
+King Street Capital Management
+Konrad Group
+L&W Enterprise
+LG Electronics
+LSA Autonomy
+LTS Technology Help Desk at Brandeis University
+Lab49
+Laboratory for Laser Energetics
+Lake Isle Press
+Lehigh University
+LifeCo, Inc.
+Lifebooker LLC
+Lightmatter
+LinQuest
+LinkedIn
+Lockheed Martin
+Los Alamos National Laboratory
+Lose It!
+Ludl Electronic Products
+Lutron Electronics
+Luvo
+MKS Instruments
+Maag Studios
+Maestro
+Mango Tech Creative
+Mar 2015  Oct 2016
+Mar 2017  Present
+Matchflare
+Math for America
+McKinsey & Company
+MeFirst - CUNYfirst Tool
+Mediative
+Meiklejohn Peer Advising Program
+Memorial Sloan Kettering Cancer Center
+Mercari, Inc. ()
+Meta (formerly Sciencescape, Inc)
+Metamarkets
+Microsoft
+Microsoft Tech Job Academy
+Middlebury
+Mighty
+MongoDB
+MongoDB, Inc.
+Monotype
+Monroe Golf Club
+Motorola
+MuseAmi
+MuseAmi, Inc.
+N/A
+NBCUniversal Media, LLC
+NY JavaScript Meetup
+NYSells
+NYU Langone Medical Center
+National Taiwan University
+NerdWallet
+Netronome
+Netsmart Technologies
+Neukom Digital Arts Leadership and Innovation Lab
+Neural Engineering and Control Lab at Columbia University
+New Jersey Institute of Technology
+New York City Marathon
+New York University
+Nimblestack
+NopSec Inc.
+Normal (NRML.com)
+Northrop Grumman Corporation
+Northrop Grumman Information Systems
+Nucleus Intercom
+Nyc Doitt
+Oasis Summer Day Camp
+Oct 2016  Jul 2017
+Oct 2016  Present
+Odd Networks
+Okta, Inc.
+OpenFin
+Optimum Semiconductor Technologies Inc.
+Optiver
+Orchard Platform
+Orthopaedic Bioengineering Research Laboratory
+Oscar Insurance
+PINCHme
+PROX-1 Satellite Mission
+Palantir Technologies
+Passkey
+PayPal
+Pegasus Solutions
+Performers Almanac
+Permission Data
+Phosphorus
+Pi Lambda Phi Fraternity
+Pinterest
+Pivotal Labs
+Pivotal, Inc.
+Pixability
+PlaceIQ
+Placemeter
+Plated
+PolicyGenius Inc.
+Pomona College
+Precision Instrumentation Group
+Prevalent Inc.
+Primary.com
+Princeton University
+Probstein123
+PubNub
+QVT Financial LP
+Qu
+Qualcomm
+Qualtrics
+Quanergy
+Quip
+R/GA
+RBS Markets & International Banking
+RIMES Technologies
+Rebar Systems
+Rebar Systems, LLC
+Recombine
+Recover Together
+Recurse Center
+Regeneron Pharmaceuticals
+Relevant Mobile
+Rensselaer Center for Open Source Software
+Rensselaer Polytechnic Institute
+Research Foundation of The City University of New York
+Revature
+Ridgewood High School
+Rochester Wealth Management Group, LLC
+RosieApp
+RuTwist.com
+Rubenstein Technology Group
+Russian Media Group, LLC & Shalom TV
+Rutgers New Brunswick Computing Services
+Rutgers University
+S&P Capital IQ
+S&P Global Market Intelligence
+SALT App
+SAMI Health
+SEVENROOMS
+STEP IT Academy
+Salesforce
+Samsung SDSA
+Santouka Ramen
+Scholastic
+Scoutsee
+ScribeAmerica
+Selerity
+Self-employed
+Sesame Workshop
+Shaper
+ShopKeep
+Shoptiques.com
+Sigma Phi Epsilon
+Simple Fractal
+SinglePlatform
+Skopenow
+SmartFinance LLC
+Snapchat, Inc.
+Soleo
+Space Jam Data
+Spot Trading LLC
+Spots Development Group, LLC.
+Square
+Stanford Marketing
+Staple Health
+Staples
+Statewide IME
+StoneCastle Placement Advisors
+Stride Consulting
+Success Academy Charter Schools
+SumAll
+SumZero, Inc.
+Summit Securities Group, LLC
+Sumo Logic
+Sutherland Global Services
+Swyft Media
+Symbiont.io
+Syncano
+Syncsort
+TAMID Group
+TD
+TECHRISE
+TMPG
+Tata Consultancy Services
+Teachers Pay Teachers
+Tech Mahindra
+Tech Startup
+Tech@NYU
+Teech
+TelTech Systems
+Teledyne LeCroy
+TeliApp Corporation
+Tesla
+Texas Tech University
+The Blackstone Group
+The College of New Jersey
+The Difference Engine
+The Flatiron School
+The MathWorks
+The New York Times
+The Red Hen
+The Research Foundation for SUNY
+The Rohatyn Group
+The Trade Desk, Inc.
+The University of Chicago
+TheStreet
+Thomson Reuters
+ThoughtWorks
+Three Bridges Capital
+Thrillist Media Group
+Tipevo
+Tiramisu Transit
+Toast, Inc.
+Tournament One
+Transnational Software Services Inc
+Trek Medics International
+Turn To tech
+TurningArt
+Twisted Matrix Labs
+Twitter
+Two Sigma
+Two Sigma IQ
+Two Sigma Investments
+UBS
+UBS Investment Bank
+UCLA
+UR Human Computer Interaction Lab
+UR Makers
+US Navy Reserve
+UST Global
+Uber
+Udacity
+Ultimate Software
+Unbxd Inc
+United Restaurants
+University of California, Riverside
+University of Connecticut
+University of Florida -- ACIS Lab, ECE Dept.
+University of Houston
+University of Manitoba
+University of Michigan
+University of Pennsylvania
+University of Pittsburgh Medical Center (UPMC)
+University of Rochester
+University of Rochester Computer Science Department
+University of Rochester Department of Physics and Astronomy
+University of Rochester IT Department
+University of Rochester IT Services
+University of Rochester Information Technology
+University of Rochester Medical Center
+University of Rochester Television Station
+University of South Carolina-Columbia
+Up For
+Utu Gaming
+VIPKID
+Vela Trading Technologies
+Venture for America
+Verizon
+Verizon Data Services
+ViaSat
+Viacom
+View The Space, Inc.
+Vigme
+Villanova Athletic Department
+Villanova Residence Life
+Virginia Engineering Foundation
+Vistaprint
+Votem Corp.
+Vox Media, Inc.
+Voxy
+WINLAB at Rutgers University
+WallachBeth Capital
+Washington University in St. Louis
+Washington and Lee University
+WaveStrike
+WeWork
+WeatherSphere
+Web.com
+Weeby.co
+Weight Watchers
+Wellesley College
+West Corporation
+What If Media Group
+Whil Concepts
+Whitepages
+Wipro Technologies
+Worcester Polytechnic Institute
+Workday
+X, the moonshot factory
+X: The Moonshot Factory
+Xerox Litigation Services
+Yahoo
+Yale School of Management
+Yale University Careers
+YellowBaby Music
+Yodle
+Zappos Family of Companies
+Zebra Technologies
+Zhejiang Fuyang Rural Commercial Bank Co.,Ltd.
+Zinc Platform
+Zipdrug
+Zocdoc
+Zola.com
+dailymotion
+delivery.com
+eBay
+edX
+iCIMS
+iMentor
+theFirehoseProject
