@@ -4,9 +4,10 @@ import requests
 import re
 import numpy as np
 import csv
+import time
 
 '''
-functions for parsing resume
+functions for parsing resumes
 '''
 
 # parse basic info section
@@ -59,15 +60,11 @@ def parse_education(education_div):
 
 def error_handle(obj):
 	return obj.text if obj != None else ''
+
 '''
 control flow of script
 '''
-try:
-	df_urls = pd.read_pickle('resume_urls.pickle')
-except FileNotFoundException:
-	df_urls = pd.read_csv('resume_urls.csv')
-	df_urls.to_pickle('resume_urls.pickle')
-
+df_urls = pd.read_csv('resume_urls.csv')
 
 length = len(df_urls)
 url_col = df_urls['url']
@@ -83,31 +80,36 @@ columns = ['job_query', 'job_name', 'location',
 parsed_resume_data = []
 parsed_resume_data.append(columns)
 
-for i in range(length):
-	url = str(url_col[i])
+parsed_resume_file = open('parsed_resumes2.csv', 'a')
 
-	req = requests.get(url)
-	data = req.text
-	soup = BeautifulSoup(data, 'lxml')
-
-	basic_info_div = soup.find('div', class_='last basicInfo-content')
-	work_experience_div = soup.find('div', class_='section-item workExperience-content')
-	education_div = soup.find('div', class_='section-item education-content')
-
-	basic_info_list = parse_basic_info(basic_info_div)
-	#print(basic_info_list)
-	education_list = parse_education(education_div)
-	# print(education_list)
-	work_experience_list = parse_work_experience(work_experience_div)
-	#print(work_experience_list)
-	row = [job_query[i]] + list(basic_info_list) + list(education_list) + list(work_experience_list)
-	parsed_resume_data.append(row)
-	print('finished row: ' + str(i))
-
-parsed_resume_file = open('parsed_resumes1.csv', 'a')
 with parsed_resume_file:
 	writer = csv.writer(parsed_resume_file)
 	writer.writerows(parsed_resume_data)
+
+	for i in range(length-1,1,-1):
+		url = str(url_col[i])
+
+		req = requests.get(url)
+		data = req.text
+		soup = BeautifulSoup(data, 'lxml')
+
+		basic_info_div = soup.find('div', class_='last basicInfo-content')
+		work_experience_div = soup.find('div', class_='section-item workExperience-content')
+		education_div = soup.find('div', class_='section-item education-content')
+
+		basic_info_list = parse_basic_info(basic_info_div)
+		#print(basic_info_list)
+		education_list = parse_education(education_div)
+		# print(education_list)
+		work_experience_list = parse_work_experience(work_experience_div)
+		#print(work_experience_list)
+		row = [job_query_col[i]] + list(basic_info_list) + list(education_list) + list(work_experience_list)
+		writer.writerows([row])
+		#parsed_resume_data.append(row)
+		print('finished row: ' + str(i))
+		time.sleep(np.random.randint(20, size=1)[0])
+
+
 
 
 
