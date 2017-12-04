@@ -8,14 +8,8 @@ from sklearn import tree
 users = []
 test_users = []
 
-#Load LinkedIn Data
-with open('../data/users/user_traj_form.csv', 'rb') as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=',', quotechar='|')
-    for row in csvreader:
-        users.append([int(x) for x in row])
-
-#Load Indeed Data
-with open('../data/users/indeed/ser_form.csv', 'rb') as csvfile:
+#Load Indeed Nurse Therapist Data
+with open('../data/users/indeed/ntr_form.csv', 'rb') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',', quotechar='|')
     for row in csvreader:
         users.append([int(x) for x in row])
@@ -35,7 +29,7 @@ with open('../data/users/best_schools.csv', 'rb') as csvfile:
         top_schools.append(row[1])
 
 base_users = users
-for floor in range(300, len(users)-10, 10):
+for floor in range(954,955):
     test_floor = floor 
     test_users = base_users[test_floor:]
     users = base_users[:test_floor]

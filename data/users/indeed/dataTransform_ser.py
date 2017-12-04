@@ -7,9 +7,6 @@ with open('../../../scraping/soft_eng_resumes.csv', 'rb') as csvfile:
     for row in csvreader:
         users.append(row)
 
-    for i, x in enumerate(users[3]):
-        print(i, x)
-
     with open('ser_min.csv', 'w+') as csvout:
         csvwriter = csv.writer(csvout, delimiter=',', quotechar='"')
         for row in users:
