@@ -3,8 +3,7 @@ import difflib
 import pandas as pd
 from sklearn import preprocessing
 from sklearn import tree
-#import files
-
+#import files 
 users = []
 test_users = []
 
@@ -35,7 +34,7 @@ with open('../data/users/best_schools.csv', 'rb') as csvfile:
         top_schools.append(row[1])
 
 base_users = users
-for floor in range(300, len(users)-10, 10):
+for floor in range(550, 551):
     test_floor = floor 
     test_users = base_users[test_floor:]
     users = base_users[:test_floor]
@@ -122,6 +121,8 @@ for floor in range(300, len(users)-10, 10):
     # create classifier
     dtc = tree.DecisionTreeClassifier()
     dtc = dtc.fit(data[['school','company1','company2']], data['company3'])
+
+    tree.export_graphviz(dtc, out_file='tree.dot', feature_names=['school','company1','company2'], class_names=['T1','T2','T3','T4','T5','NONE'])
 
     # Easy Predit Method
     def predict(user):
