@@ -36,10 +36,16 @@ with open('../data/users/best_schools.csv', 'rb') as csvfile:
         top_schools.append(row[1])
 
 base_users = users
-for floor in range(550,551):
-    test_floor = floor 
-    test_users = base_users[test_floor:]
-    users = base_users[:test_floor]
+num_folds = 10
+dtc_averages = []
+etc_averages = []
+mnnb_averages = []
+nnmlpc_averages = []
+averages_list = [dtc_averages, etc_averages, mnnb_averages, nnmlpc_averages]
+for i in range(num_folds):
+    test_size = len(users)/num_folds
+    test_users = base_users[i*test_size:][:test_size]
+    users = base_users[:i*test_size] + base_users[(i+1)*test_size:]
     # Main binning
     #company_bins = [0, 50, 200, 500, len(top_companies), len(top_companies)+1, len(top_companies)+2]
     #company_bin_labels = ['T1', 'T2', 'T3', 'T4', 'T5', 'NONE']
@@ -122,30 +128,44 @@ for floor in range(550,551):
 
     # create classifier
     dtc = tree.DecisionTreeClassifier()
-    #dtc = tree.ExtraTreeClassifier()
-    #dtc = naive_bayes.MultinomialNB(alpha=1.0, fit_prior=True, class_prior=None)
-    #dtc = neural_network.MLPClassifier(alpha=1.0)
+    etc = tree.ExtraTreeClassifier()
+    mnnb = naive_bayes.MultinomialNB(alpha=1.0, fit_prior=True, class_prior=None)
+    nnmlpc = neural_network.MLPClassifier(alpha=1.0)
+
     dtc = dtc.fit(data[['school','company1','company2']], data['company3'])
+    etc = etc.fit(data[['school','company1','company2']], data['company3'])
+    mnnb = mnnb.fit(data[['school','company1','company2']], data['company3'])
+    nnmlpc = nnmlpc.fit(data[['school','company1','company2']], data['company3'])
 
 # Export tree
 #    tree.export_graphviz(dtc, out_file='tree.dot', feature_names=['school','company1','company2'], class_names=['T1','T2','T3','T4','T5','NONE'])
 
     # Easy Predit Method
-    def predict(user):
+    def predict(user, classifier):
         test = makeTestCase(user[:3])
-        return dtc.predict(test)
+        return classifier.predict(test)
 
     # test a data set
     # test = ['Binghamton University', 'Arity', 'Cisco']
     # test_pre = makeTestCase(test)
     # test_out = dtc.predict(test_pre)
     # print(test_pre, test_out)
-    corrects = 0
-    for test in test_users:
-        test_case = makeTestCase(test)
-        test_result = predict(test)
-        correct = test_case[0][3] == test_result[0]
-        if correct:
-            corrects += 1
+    cf_name = ['dtc', 'etc', 'mnnb', 'nnmlpc']
+    classifiers = [dtc, etc, mnnb, nnmlpc]
+    for i, cf in enumerate(classifiers):
+        corrects = 0
+        for test in test_users:
+            test_case = makeTestCase(test)
+            test_result = predict(test, cf)
+            correct = test_case[0][3] == test_result[0]
+            if correct:
+                corrects += 1
 
-    print(len(users), len(test_users), corrects*1.0/len(test_users))
+        averages_list[i].append(corrects*1.0/len(test_users))
+	print(cf_name[i], len(users), len(test_users), corrects*1.0/len(test_users))
+
+
+print('dtc', num_folds, sum(dtc_averages)/len(dtc_averages))
+print('etc', num_folds, sum(etc_averages)/len(etc_averages))
+print('mnnb', num_folds, sum(mnnb_averages)/len(mnnb_averages))
+print('nnmlpc', num_folds, sum(nnmlpc_averages)/len(nnmlpc_averages))
