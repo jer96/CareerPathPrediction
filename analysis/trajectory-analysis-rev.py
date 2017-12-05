@@ -3,6 +3,8 @@ import difflib
 import pandas as pd
 from sklearn import preprocessing
 from sklearn import tree
+from sklearn import naive_bayes
+from sklearn import neural_network
 #import files 
 users = []
 test_users = []
@@ -34,7 +36,7 @@ with open('../data/users/best_schools.csv', 'rb') as csvfile:
         top_schools.append(row[1])
 
 base_users = users
-for floor in range(550, 551):
+for floor in range(550,551):
     test_floor = floor 
     test_users = base_users[test_floor:]
     users = base_users[:test_floor]
@@ -120,9 +122,13 @@ for floor in range(550, 551):
 
     # create classifier
     dtc = tree.DecisionTreeClassifier()
+    #dtc = tree.ExtraTreeClassifier()
+    #dtc = naive_bayes.MultinomialNB(alpha=1.0, fit_prior=True, class_prior=None)
+    #dtc = neural_network.MLPClassifier(alpha=1.0)
     dtc = dtc.fit(data[['school','company1','company2']], data['company3'])
 
-    tree.export_graphviz(dtc, out_file='tree.dot', feature_names=['school','company1','company2'], class_names=['T1','T2','T3','T4','T5','NONE'])
+# Export tree
+#    tree.export_graphviz(dtc, out_file='tree.dot', feature_names=['school','company1','company2'], class_names=['T1','T2','T3','T4','T5','NONE'])
 
     # Easy Predit Method
     def predict(user):
