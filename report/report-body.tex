@@ -1,0 +1,132 @@
+\section{Introduction}
+With the excess of career opportunities in our society, it has become increasingly difficult to choose the right career path. This is an example of  the paradox of choice where having more options causes individual to struggle when making decisions, due to fear of making the wrong decision. Further, this indecisiveness causes a gap in the job market, filling jobs with individuals who are not passionate about their work, causing decreased levels of productivity. Our mission, is to limit the range of choices for prospective professionals, giving them the opportunity to better understand career paths based on their work experience and the current education and job market. 
+
+\section{Related Work}
+As of late companies are searching for ways to attract and retain top talent in order to further business initiatives. In turn,  research in the field of talent acquisition, retention and mobility is gaining a substantial amount of traction. Two studies specifically[citation 1, citation2], applied data mining strategies to model talent career paths and career outcomes based on education respectively. 
+
+The research team in [citation 1] sought to model talent career paths by focusing on turnover and career progression. Their study is focused on a dataset containing anonymized employee career data. For each employee, there is temporal data reflective of start/end dates of the employee joining the company or holding a position at a given occupational level. Further, their research was supplemented by both static and dynamic information for each employee. They describe static information as unchanged data such as gender and age. On the other hand, dynamic information included numeric performance ratings and hierarchical report chains with respective time stamps. The use of such dynamic factors provided a qualitative look at what governs an employee leaving a company or being promoted within a company which was unique in comparison to the datasets we were able to gather for analysis. The researchers found that without the numeric performance rating attribute the model’s performance would decrease substantially, meaning that this attribute is a viable metric for predicting career path and status within a company.  All in all, the team proposed “a novel survival analysis approach for modeling the career paths of employees, which is based on multitask learning with ranking constraint formulation.”[citation] which significantly outperformed other multi-task learning and survival analysis methods. 
+
+The research team from LinkedIn [citation 2] leveraged valuable proprietary data in order to rank universities based on industry performance of their graduates. The team created a system with two main ranking components: a company ranker and school ranker. The company ranker used LinkedIn member data to generate desirable companies for a given profession. The school ranker was then used to rank universities based on the number of graduates attaining a job at a desirable company for a given profession. Their company ranker is a graphical model, where companies represent the nodes of the graph and employee movement from company to company is represented by the edges of the graph. Finally, in order to generate the desirability score of each company, the team applied PageRank on the graph. Using this company ranker they could then begin to generate university rankings. The research proposed by this group provided a novel approach to understanding the importance universities play in attaining a job for a given profession. They were able to analyze career= trajectories of graduates and use that information to generate a ranking for a university as opposed to other metrics based on “ reputational assessments”. Ultimately, the team’s work provided substantial insight for universities and students; adding to the resources provided by LinkedIn Higher Education while gaining media coverage from major publishers.
+
+Within our analysis, we sought to accomplish the following: gain insight on the current job and education market, mine user data relevant to career trajectories(LinkedIn profiles and resumes), use mined data to predict potential career paths. All in all, our research culminates a variety of data sources and data mining approaches to help prospective professionals make confident decisions in the job industry. 
+\section{Methodology}
+\subsection{Data Acquisition}
+Gathering data began with searching for openly available datasets relevant to our problem statement. In turn, we gathered data relevant to the current education and job market, leading company data and user data. 
+Job Market data
+US Jobs on Monster.com [citation]
+Includes job listings of various US based positions. Provides, title, description, location, sector and organization of each listing 
+Provided us with a means for analyzing how job descriptions play a role in predicting job industry through the use of text analysis and classification methods
+Allowed us to mine popular locations amongst job listings 
+Company Data
+Fortune 500 Companies[citation]
+List of top companies ranked by revenue
+Provided a means for tiering companies 
+(add more)
+The Open Data 500 [citation]
+General company metadata including: size, category, location, business model attributes 
+Provided data to analyze industry, company size and location popularity
+Education Data
+College Scorecard Data[citation]
+Contains relevant statistics about US universities including: admission rates, unemployment rates, post graduation earnings and degree percentages.
+Provided data for modeling salary expectations based on university type
+Allowed us to analyze correlation of admission rates and unemployment rates.
+University and Degree Data[citation]
+Included 3 datasets regarding US universities and degree programs
+Salary by degree: earnings statistics for various degree programs 
+Salary by college type: earnings statistics for universities of a given type (Public, Ivy League, Party, Liberal Arts)
+Salary by region: earnings statistics for universities within given regions. (This dataset was joined with the college type dataset as they both contained the same universities.)
+The Times Higher Education World University Ranking 2018
+List of World Universities ranked
+Allowed for a means of tiering universities for predictive analysis
+User Data
+Linkedin.com Scrapper
+(add more)
+Indeed.com Scrapper 
+Extracted job title, education and 3 most recent work experiences based on job query 
+Collected a total of records to use in conjunction with linkedin data to predict (add more)
+
+\subsection{File Structure}
+analysis folder
+College-scorecard-analysis.ipynb: code for analyzing College Scorecard Dataset[citation]
+Education-analysis.ipynb: code for analyzing Wall Street Journal University datasets[citation]
+Job-market-analysis-refined.ipynb: code for analyzing job listings from Monster.com dataset [citation]
+Trajectory-analysis-rev-ntr.py
+Trajectory-analysis.py
+Us-companies-analysis.ipynb: code for analyzing The Open Data 500 [citation] dataset
+data folder
+Images folder: contains generated images from analysis
+Companies folder: 
+us-companies.csv/.pickle
+Education folder:
+CollegeScorecardDataDictionary.xlsx: data dictionary for college scorecard data [citation]
+degrees-that-pay-back.csv/.pickle: earnings for degree programs [citation]
+salaries-by-college-type.csv/.pickle: categorized universities with earnings [citation]
+salaries-by-region.csv/.pickle: universities categorized by region with earnings [citation]
+Jobs folder:
+monster-jobs.csv/.pickle : monsterjobs.com dataset [citation]
+users
+scraping folder
+indeed\_res\_url\_scraper.py: scrapes resume urls
+exec\_res\_url\_scraper.py: executes resume scraping based on input resume urls
+resume\_scraper.py: parses html for resume data
+
+\section{Experiment}
+\subsection{Job Listing Analysis}
+To begin analysis of the job listing data we first sought to gain an understanding of the dataset by constructing visualizations of the data. Throughout this process we were able to gain insight into popular job locations, distribution of organization and sector values, and frequently occurring words within job titles.  As seen in figure 1, healthcare and retail listings dominate this dataset which validates the important words found in the job title field due to the fact that “manager”, “sales”, “specialist”, “technician” , “supervisor” are among the top ten most frequently occuring words. 
+
+Next, we sought to analyze the job description field to see if we could use this attribute to determine what organization the listing corresponded to. The motivation here was that each organization would have a unique set of words within the description field that are exclusive to that organization and using this assumption we can create a consistent feature set for each job listing to train a classifier with. The following steps were taken in our text classification process:
+Feature Creation
+Create of the bag-of-words 
+Iterated through all job listings
+Removed irrelevant words(stop words) and  punctuation
+Lemmatized each non-stop word in order to reduce derived words down to one common lemma. i.e.(walked, walks, walking = walk)
+We only consider N most frequent words 
+Use our bag-of-words to create a consistent feature set for each listing’s description field
+Given our bag-of-words of length N we create a length N feature vector
+Each index i  in the feature vector corresponds to a binary value(1 if word is in description else 0) based on whether or not the word in index i of our bag-of-words is in the description of the current listing
+Label Creation
+One hot encode organization values
+Given N organization values create a label vector of length N 
+Each index of the label vector corresponds to a unique organization value 
+For each listing, set the listing’s organization value index to 1 in the label vector. Every other index will remain 0
+Classification
+After creation of our feature and label sets we were prepared for classification. The algorithms we used for classification were Naive Bayes and a Multilayer Neural Network. Our training and testing sets where split 75\%25\% (total = 6091 , training = 4568 , test = 1523) and  the top 5 most common organization values were used as labels.  
+We used two forms of Naive Bayes implement by scikit-learn namely, Multinomial and Bernoulli Bayes. The core difference between these two algorithms is that Bernoulli Bayes can only operate with binary feature values but Multinomial Bayes can operate with both binary and absolute count feature values. 
+The accuracy of our Naive Bayes classifiers were just over chance, attaining 64\% accuracy for Multinomial Bayes and 63\% for Bernoulli Bayes. 
+Our Multilayer Neural Network was designed using TensorFlow[citation]. In order to create a neural network using TensorFlow, we had to create a computation graph to represent our neural network model which would then be run by a TensorFlow session with our input data. In order to create the computation graph, each layer’s weights and biases were defined, then the computation between each layer was defined. The computation between each layer is simply (input data * weights) + biases applied to an activation function (reLu for classification purposes) where each layer is then passed as input data to the next layer. Next, we defined an optimization function to reduce the cost after each iteration of training. Finally, to ensure our network was operating appropriately, we ran our TensorFlow session in batches, outputting the loss to ensure that as the network was training the loss was decreasing. Ultimately, our neural network model attained an accuracy of 75\%.
+
+Job Listing analysis results
+Ultimately, organization prediction based on job description could be improved with a larger data set and cleaner data. The data set proved to be very sparse leaving us with a small fraction of the dataset to analyze(only 6091 listings out of 22,000). Therefore, given more data from a variety of job listings our text based classification approach could yield promising results.
+
+Education Analysis
+College Scorecard data
+The motivation for analyzing the college scorecard data[citation] was to understand how various university metrics play a role in determining employment and earnings of prospective graduates. The main attributes of focus were admission rates, unemployment rates, and degree percentages(percentage of students awarded a given degree) for each university. One of the first metrics we analyzed was the correlation between admission and unemployment rates. Looking at the scatterplot below, it is evident that there is no correlation between admission and unemployment rates. This is an interesting finding because this contrary to the popular belief that universities with lower admission rates yield increased job placement. But after careful consideration, this lack of correlation can possibly be explained by universities with higher admission rates offering degree programs where the job market is less competitive and there are more readily available jobs. As opposed to universities with lower admission rates placing students in highly competitive fields. Another possible explanation could be that universities with lower admission rates are on average smaller than universities with higher admission rates. For example, two universities(one large, one small) with the same number of unemployed graduates, will lead to the smaller university having a higher unemployment rate than the larger university.
+
+To further investigate the effects of university statistics on career outcomes we created a multivariate linear regression model.
+In doing so, we used degree percentages, admission rates and unemployment rates as independent variables and median 10 year salary as our dependent variable.
+The accuracy of the regression model is characterized by a standard error of ~25\% and R\^2 value of .5. This tells us that the dependent variables play a moderately strong role in determining the salary of a graduate of a given university with relatively high accuracy. However, we noticed a potential source of bias within the data. We recognized that degrees for health professions were the most common degree type awarded, nearly doubling the next highest category. This imbalance could potentially skew our regression to favor salaries of health professions as opposed to the other degree programs. Therefore, we pruned universities which had health profession degree percentage attribute larger than 50\%. This yielded a .3 increase in our R\^2 value and a ~5\% increase in accuracy.
+
+Taking an even granular look at degree programs we were able to visualize percent change from start to mid career for various degree programs (see figure). The two lowest percent changes in salary were for Nursing and Physician Assistant degree programs. Our hypothesis for this finding is that these two degree programs do not adopt the typical corporate hierarchy. In order for nurses or physician assistants to advance to higher levels of the medical hierarchy, more schooling would be required. Overall, this is quite common in the medical field, in order for employees to advance more certification is inevitable. On the other hand, the majority of degree programs under study do adopt a corporate hierarchy where it is common for an employee to  “climb the corporate ladder”. For example, a business student moving from an analyst, to an associate, to vice president, etc. Ultimately, the corporate hierarchy trend causes the mean percent change to be ~70\% while Nursing and Physician Assistant percentages are substantially lower ~50\%. 
+
+Company Analysis 
+To further supplement our predictive modelling of career outcomes we sought to extract various characteristics of industry leading companies. For example, when analyzing the The Open Data 500 dataset [citation], we found that the most popular company categories were data/technology and Finance/Investment validating the high frequency of company locations being in Silicon Valley and New York. Further, startups dominate this data set, the figure below shows over 50\% of companies having less than 50 employees.
+
+
+\begin{acks}
+
+The authors would like to thank Dr. Maura Turolla of Telecom
+Italia for providing specifications about the application scenario.
+
+The work is supported by the \grantsponsor{GS501100001809}{National
+  Natural Science Foundation of
+  China}{http://dx.doi.org/10.13039/501100001809} under Grant
+No.:~\grantnum{GS501100001809}{61273304\_a}
+and~\grantnum[http://www.nnsf.cn/youngscientists]{GS501100001809}{Young
+  Scientists' Support Program}.
+
+
+\end{acks}
+
+% Bibliography
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report-bibliography}
