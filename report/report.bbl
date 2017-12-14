@@ -1,0 +1,165 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{500}{500}{2017}]%
+        {fortune500}
+\bibfield{author}{\bibinfo{person}{Fortune 500}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{Fortune 500}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+Retrieved December 14, 2017 from \url{http://fortune.com/fortune500/}}
+
+
+\bibitem[\protect\citeauthoryear{Bilogur}{Bilogur}{2017}]%
+        {kaggleMonsterJobs}
+\bibfield{author}{\bibinfo{person}{Aleksey Bilogur}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{US Jobs on Monster.com}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+Retrieved December 14, 2017 from
+  \url{https://www.kaggle.com/PromptCloudHQ/us-jobs-on-monstercom/version/1}}
+
+
+\bibitem[\protect\citeauthoryear{Chris}{Chris}{2017}]%
+        {kaggleCollege}
+\bibfield{author}{\bibinfo{person}{Chris}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{Paysacale Inc. Where it Pays to Attend College}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+Retrieved December 14, 2017 from
+  \url{https://www.kaggle.com/wsj/college-salaries}}
+
+
+\bibitem[\protect\citeauthoryear{DOE}{DOE}{2017}]%
+        {collegeScorecard}
+\bibfield{author}{\bibinfo{person}{U.S. DOE}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{College Scorecard Data}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+Retrieved December 14, 2017 from \url{https://collegescorecard.ed.gov/data/}}
+
+
+\bibitem[\protect\citeauthoryear{Education}{Education}{2017}]%
+        {timesHigher}
+\bibfield{author}{\bibinfo{person}{Time~Higher Education}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{World University Rankings 2018}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+Retrieved December 14, 2017 from
+  \url{https://www.timeshighereducation.com/world-university-rankings/2018/world-ranking#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats}}
+
+
+\bibitem[\protect\citeauthoryear{Indeed}{Indeed}{2017}]%
+        {indeed}
+\bibfield{author}{\bibinfo{person}{Indeed}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{Indeed Resumes}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+Retrieved December 14, 2017 from \url{https://www.indeed.com/resumes}}
+
+
+\bibitem[\protect\citeauthoryear{Kapur, Lytkin, Chen, Agarwal, and
+  Perisic}{Kapur et~al\mbox{.}}{2016}]%
+        {kapur2016}
+\bibfield{author}{\bibinfo{person}{Navneet Kapur}, \bibinfo{person}{Nikita~I
+  Lytkin}, \bibinfo{person}{Bee-Chung Chen}, \bibinfo{person}{Deepak Agarwal},
+  {and} \bibinfo{person}{Igor Perisic}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Ranking Universities Based on Career Outcomes of
+  Graduates.}. In \bibinfo{booktitle}{{\em KDD}}. \bibinfo{pages}{137--144}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Li, Ge, Zhu, Xiong, and Zhao}{Li
+  et~al\mbox{.}}{2017}]%
+        {li2017}
+\bibfield{author}{\bibinfo{person}{Huayu Li}, \bibinfo{person}{Yong Ge},
+  \bibinfo{person}{Hengshu Zhu}, \bibinfo{person}{Hui Xiong}, {and}
+  \bibinfo{person}{Hongke Zhao}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Prospecting the Career Development of Talents: A
+  Survival Analysis Perspective}. In \bibinfo{booktitle}{{\em Proceedings of
+  the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data
+  Mining}}. ACM, \bibinfo{pages}{917--925}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{LinkedIn}{LinkedIn}{2017}]%
+        {linkedin}
+\bibfield{author}{\bibinfo{person}{LinkedIn}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{LinkedIn}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+Retrieved December 14, 2017 from \url{https://www.linkedin.com}}
+
+
+\bibitem[\protect\citeauthoryear{Pai}{Pai}{2017}]%
+        {kaggleCompanies}
+\bibfield{author}{\bibinfo{person}{Sharan Pai}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{The GovLab, Open Data 500}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+Retrieved December 14, 2017 from
+  \url{https://www.kaggle.com/govlab/open-data-500-companies}}
+
+
+\bibitem[\protect\citeauthoryear{TensorFLow}{TensorFLow}{2017}]%
+        {tensorFlow}
+\bibfield{author}{\bibinfo{person}{TensorFLow}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{TensorFlow Basic Usage}.
+\newblock   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+Retrieved December 14, 2017 from
+  \url{https://www.tensorflow.org/versions/r0.12/get_started/basic_usage}}
+
+
+\end{thebibliography}
